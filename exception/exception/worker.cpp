@@ -1,28 +1,28 @@
-#include "WORKER.hpp"
+Ôªø#include "WORKER.hpp"
 
 WORKER::WORKER(const char* surname, const char* init, int year) :
 	surname(surname), init(init), year(year) {
-	std::cout << "\n ÓÌÒÚÛÍÚÓ WORKER\n";
+	std::cout << "\n–ö–æ–Ω—Å—Ç—Ä—É–∫—Ç–æ—Ä WORKER\n";
 }
 WORKER::WORKER(const WORKER& w) : surname(w.surname), init(w.init), year(w.year) {
-	std::cout << "\n ÓÌÒÚÛÍÚÓ ÍÓÔËÓ‚‡ÌËˇ WORKER\n";
+	std::cout << "\n–ö–æ–Ω—Å—Ç—Ä—É–∫—Ç–æ—Ä –∫–æ–ø–∏—Ä–æ–≤–∞–Ω–∏—è WORKER\n";
 }
 WORKER::~WORKER() {}
-/*„ÂÚÚÂ˚ Ë ÒÂÚÚÂ˚ ‰Îˇ surname*/
+/*–≥–µ—Ç—Ç–µ—Ä—ã –∏ —Å–µ—Ç—Ç–µ—Ä—ã –¥–ª—è surname*/
 void WORKER::setSurname(const std::string& str) {
 	surname = str;
 }
 const std::string& WORKER::getSurname()const {
 	return surname;
 }
-/*„ÂÚÚÂ˚ Ë ÒÂÚÚÂ˚ ‰Îˇ init*/
+/*–≥–µ—Ç—Ç–µ—Ä—ã –∏ —Å–µ—Ç—Ç–µ—Ä—ã –¥–ª—è init*/
 void WORKER::setInit(const std::string& str) {
 	init = str;
 }
 const std::string& WORKER::getInit()const {
 	return init;
 }
-/*„ÂÚÚÂ˚ Ë ÒÂÚÚÂ˚ ‰Îˇ year*/
+/*–≥–µ—Ç—Ç–µ—Ä—ã –∏ —Å–µ—Ç—Ç–µ—Ä—ã –¥–ª—è year*/
 void WORKER::setYear(int n) {
 	year = n;
 }
@@ -31,20 +31,20 @@ int WORKER::getYear()const {
 }
 
 std::istream& operator >> (std::istream& in, WORKER& w) {
-	if (!(in >> w.surname >> w.init >> w.year)) {//ÂÒÎË ÌÂÍÓÂÍÚÌ˚È ‚‚Ó‰, ‚˚·Ë‚‡ÂÏ ËÒÍÎ˛˜ÂÌËÂ
-		throw Exception("Œ¯Ë·Í‡ ‚‚Ó‰‡");
+	if (!(in >> w.surname >> w.init >> w.year)) {//–µ—Å–ª–∏ –Ω–µ–∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π –≤–≤–æ–¥, –≤—ã–±–∏–≤–∞–µ–º –∏—Å–∫–ª—é—á–µ–Ω–∏–µ
+		throw Exception("–û—à–∏–±–∫–∞ –≤–≤–æ–¥–∞");
 	}
 	return in;
 }
 std::ostream& operator <<(std::ostream& out, const WORKER& w) {
-	out << "\nƒ‡ÌÌ˚Â: " << w.surname
+	out << "\n–î–∞–Ω–Ω—ã–µ: " << w.surname
 		<< " " << w.init
-		<< "\n√Ó‰: " << w.year;
+		<< "\n–ì–æ–¥: " << w.year;
 	return out;
 }
 
 WORKER& WORKER::operator =(const WORKER& w) {
-	if (this != &w) {//Á‡˘ËÚ‡ ÓÚ Ò‡ÏÓÔËÒ‚‡Ë‚‡ÌËˇ
+	if (this != &w) {//–∑–∞—â–∏—Ç–∞ –æ—Ç —Å–∞–º–æ–ø—Ä–∏—Å–≤–∞–∏–≤–∞–Ω–∏—è
 		surname = w.surname;
 		init = w.init;
 		year = w.year;

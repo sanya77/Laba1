@@ -1,28 +1,28 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 #include <iostream>
 #include "Exception.hpp"
 
 class WORKER {
-	std::string surname;//ôàìèëèÿ
-	std::string init;//Èíèöèàëû
-	int year;//ãîä ïîñòóïëåíè íà ðàáîòó
+	std::string surname;//Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ñ
+	std::string init;//Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ñ‹
+	int year;//Ð³Ð¾Ð´ Ð¿Ð¾ÑÑ‚ÑƒÐ¿Ð»ÐµÐ½Ð¸ Ð½Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ
 
 public:
 	WORKER(const char* surname = "", const char* init = "", int year = 0);
 	WORKER(const WORKER& w);
 	~WORKER();
-	/*ãåòòåðû è ñåòòåðû äëÿ surname*/
+	/*Ð³ÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð¸ ÑÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð´Ð»Ñ surname*/
 	void setSurname(const std::string& str);
 	const std::string& getSurname() const;
-	/*ãåòòåðû è ñåòòåðû äëÿ init*/
+	/*Ð³ÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð¸ ÑÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð´Ð»Ñ init*/
 	void setInit(const std::string& str);
 	const std::string& getInit()const;
-	/*ãåòòåðû è ñåòòåðû äëÿ year*/
+	/*Ð³ÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð¸ ÑÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ð´Ð»Ñ year*/
 	void setYear(int n);
 	int getYear()const;
-	/*îïåðàòîðû ââîäà è âûâîäà*/
+	/*Ð¾Ð¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ñ‹ Ð²Ð²Ð¾Ð´Ð° Ð¸ Ð²Ñ‹Ð²Ð¾Ð´Ð°*/
 	friend std::istream& operator >> (std::istream& in, WORKER& t);
 	friend std::ostream& operator <<(std::ostream& out, const WORKER& t);
-	WORKER& operator =(const WORKER& t);//îïèðàòîð ïðèñâàèâàíèÿ
+	WORKER& operator =(const WORKER& t);//Ð¾Ð¿Ð¸Ñ€Ð°Ñ‚Ð¾Ñ€ Ð¿Ñ€Ð¸ÑÐ²Ð°Ð¸Ð²Ð°Ð½Ð¸Ñ
 };
